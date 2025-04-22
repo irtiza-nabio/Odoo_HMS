@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_patient,access_hospital_patient,model_hospital_patient,madaripur_hospital.group_hospital_receptionist,1,1,1,1
+access_hospital_appointment,access_hospital_appointment,model_hospital_appointment,madaripur_hospital.group_hospital_receptionist,1,1,1,1
+access_hospital_appointment_line,access_hospital_appointment_line,model_hospital_appointment_line,madaripur_hospital.group_hospital_receptionist,1,1,1,1
+access_patient_tag_doctor,access.patient.tag.doctors,model_patient_tag,madaripur_hospital.group_hospital_doctors,1,1,1,1
+access_patient_tag_receptionist,access.patient.tag.receptionist,model_patient_tag,madaripur_hospital.group_hospital_receptionist,1,1,1,0

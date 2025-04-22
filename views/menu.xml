@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem id="menu_hospital_root" name="HMS" web_icon="madaripur_hospital,static/description/Icon.png" sequence="35"/>
+
+    <!-- Submenus under Root -->
+    <menuitem id="menu_frontdesk" name="Front Desk" parent="menu_hospital_root"/>
+    <menuitem id="menu_billing" name="Billing" parent="menu_hospital_root"/>
+
+    <!-- Front Desk Menus -->
+    <menuitem id="menu_patients" name="Patients" parent="menu_frontdesk" action="action_hospital_patient"/>
+    <menuitem id="menu_patients_readonly" name="View Patients" parent="menu_frontdesk" action="action_hospital_readonly_patient"/>
+    <menuitem id="menu_appointment" name="Appointments" parent="menu_frontdesk" action="action_hospital_appointment"/>
+    <menuitem id="menu_appointment_line" name="Appointment Lines" parent="menu_frontdesk" action="action_hospital_appointment_line"/>
+
+    <!-- Billing Menus -->
+    <menuitem id="menu_hms_invoicing" name="Invoice" parent="menu_billing" action="account.action_move_out_invoice_type"/>
+    <menuitem id="menu_hms_payment" name="Payment" parent="menu_billing" action="account.action_account_payments"/>
+
+    <!-- Configuration Menu -->
+    <menuitem id="menu_configuration" name="Configuration" sequence="100" groups="madaripur_hospital.group_hospital_doctors" parent="menu_hospital_root"/>
+    <menuitem id="menu_patient_tag" name="Tags" parent="menu_configuration" action="action_patient_tag"/>
+
+</odoo>
