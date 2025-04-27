@@ -7,4 +7,3 @@ class AccountMove(models.Model):
     appointment_id = fields.Many2one(
         'hospital.appointment', string="Appointment"
     )
-# easy way

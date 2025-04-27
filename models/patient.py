@@ -35,9 +35,3 @@ def _check_patient_appointments(self):
             raise UserError(_(
                 "You cannot delete the patient '%s' because there are existing appointments."
             ) % rec.name)
-
-
-# Rabbi Bhai Sheraaaaaa
-#
-#
-# aded cpmment

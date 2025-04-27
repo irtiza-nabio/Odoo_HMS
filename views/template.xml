@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Website Menu Item -->
+    <template id="contacts_menu" inherit_id="website.layout" name="Hospital Contacts Menu">
+        <xpath expr="//nav//ul" position="inside">
+            <li class="nav-item">
+                <a class="nav-link" href="/hospital/contacts">Contacts</a>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Page Template for Contacts List -->
+    <template id="contacts_page" name="Hospital Contacts Page">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h2>Contact List</h2>
+                <table class="table table-bordered mt-3">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Contact Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="contacts" t-as="contact">
+                            <tr>
+                                <td><t t-esc="contact.complete_name"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>
